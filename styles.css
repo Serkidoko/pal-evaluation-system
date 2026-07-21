@@ -115,6 +115,26 @@ td small { color: var(--muted); }
 .badge.partial { color: var(--amber); background: var(--amber-soft); }
 .badge.unknown { color: #536079; background: #edf0f5; }
 
+.coverage-summary { display: grid; grid-template-columns: .7fr .9fr 1.5fr 1.1fr; margin-bottom: 18px; border: 1px solid var(--line); border-radius: 12px; background: var(--wash); }
+.coverage-summary div { padding: 14px 16px; border-right: 1px solid var(--line); }
+.coverage-summary div:last-child { border-right: 0; }
+.coverage-summary span, .coverage-summary strong { display: block; }
+.coverage-summary span { color: var(--muted); font-size: .7rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; }
+.coverage-summary strong { margin-top: 4px; font-size: .9rem; }
+.scorecard-list { display: grid; gap: 12px; }
+.case-score { overflow: hidden; border: 1px solid var(--line); border-radius: 13px; background: white; }
+.case-score header { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 14px; align-items: center; padding: 15px 16px; border-bottom: 1px solid var(--line); background: var(--wash); }
+.case-score header h3 { margin: 0; font-size: 1rem; }
+.case-score header p { margin: 2px 0 0; color: var(--muted); font-size: .78rem; }
+.case-score header a { padding: 5px 8px; font-size: .76rem; font-weight: 750; }
+.case-id { display: grid; width: 42px; height: 32px; place-items: center; border-radius: 7px; background: var(--blue); color: white; font-size: .75rem; font-weight: 850; }
+.dimension-results { display: grid; grid-template-columns: repeat(5, 1fr); margin: 0; }
+.dimension-results > div { min-width: 0; padding: 13px 14px; border-right: 1px solid var(--line); }
+.dimension-results > div:last-child { border-right: 0; }
+.dimension-results dt { margin-bottom: 8px; color: var(--muted); font-size: .68rem; font-weight: 850; letter-spacing: .04em; text-transform: uppercase; }
+.dimension-results dd { margin: 0; }
+.dimension-results small { display: block; margin-top: 7px; color: var(--muted); font-size: .72rem; line-height: 1.4; }
+
 .evidence-list { display: grid; gap: 10px; }
 .evidence-download { display: grid; grid-template-columns: 1fr auto; gap: 2px 24px; margin-bottom: 16px; padding: 18px; border: 1px solid #a9bdef; border-radius: 12px; background: var(--blue-soft); color: var(--ink); text-decoration: none; }
 .evidence-download span, .evidence-download small { color: var(--muted); }
@@ -164,6 +184,13 @@ footer span { color: #acbbd9; }
   .dimension-grid { grid-template-columns: repeat(3, 1fr); }
   .suite-layers { grid-template-columns: repeat(2, 1fr); }
   .evidence-policy dl { grid-template-columns: repeat(3, 1fr); }
+  .coverage-summary { grid-template-columns: repeat(2, 1fr); }
+  .coverage-summary div:nth-child(2) { border-right: 0; }
+  .coverage-summary div:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+  .dimension-results { grid-template-columns: repeat(2, 1fr); }
+  .dimension-results > div { border-bottom: 1px solid var(--line); }
+  .dimension-results > div:nth-child(2n) { border-right: 0; }
+  .dimension-results > div:last-child { border-bottom: 0; }
 }
 @media (max-width: 760px) {
   .shell { width: min(100% - 24px, 1180px); }
@@ -177,6 +204,14 @@ footer span { color: #acbbd9; }
   .evidence-policy dl { grid-template-columns: 1fr; }
   .evidence-download { grid-template-columns: 1fr; }
   .evidence-download strong { grid-row: auto; grid-column: auto; margin-top: 8px; }
+  .coverage-summary { grid-template-columns: 1fr; }
+  .coverage-summary div, .coverage-summary div:nth-child(2) { border-right: 0; border-bottom: 1px solid var(--line); }
+  .coverage-summary div:last-child { border-bottom: 0; }
+  .case-score header { grid-template-columns: auto minmax(0, 1fr); }
+  .case-score header a { grid-column: 2; justify-self: start; padding-left: 0; }
+  .dimension-results { grid-template-columns: 1fr; }
+  .dimension-results > div, .dimension-results > div:nth-child(2n) { border-right: 0; border-bottom: 1px solid var(--line); }
+  .dimension-results > div:last-child { border-bottom: 0; }
   .steps li { grid-template-columns: 1fr; gap: 4px; }
   footer .shell { flex-direction: column; }
 }
