@@ -113,10 +113,18 @@ td small { color: var(--muted); }
 .badge.unknown { color: #536079; background: #edf0f5; }
 
 .evidence-list { display: grid; gap: 10px; }
+.evidence-download { display: grid; grid-template-columns: 1fr auto; gap: 2px 24px; margin-bottom: 16px; padding: 18px; border: 1px solid #a9bdef; border-radius: 12px; background: var(--blue-soft); color: var(--ink); text-decoration: none; }
+.evidence-download span, .evidence-download small { color: var(--muted); }
+.evidence-download strong { grid-row: 1 / span 2; grid-column: 2; align-self: center; color: var(--blue); }
+.evidence-download small { font-size: .76rem; }
 details { border: 1px solid var(--line); border-radius: 13px; background: white; }
 summary { cursor: pointer; padding: 17px 18px; font-weight: 780; }
 summary span { display: inline-block; min-width: 48px; color: var(--blue); }
 details > p { margin: 0; padding: 0 18px 16px; color: var(--muted); }
+.transcript { margin: 0 18px 14px; padding: 14px; border: 1px solid var(--line); border-radius: 9px; background: var(--wash); }
+.transcript b { display: block; margin-bottom: 6px; font-size: .74rem; letter-spacing: .04em; text-transform: uppercase; }
+.transcript b:not(:first-child) { margin-top: 12px; }
+blockquote { margin: 0; padding-left: 12px; border-left: 3px solid #a9bdef; color: #3f4b61; font: .86rem/1.55 ui-monospace, SFMono-Regular, Consolas, monospace; }
 .links { display: flex; flex-wrap: wrap; gap: 8px; }
 .links a { padding: 6px 10px; border-radius: 8px; background: var(--blue-soft); font-size: .8rem; font-weight: 750; text-decoration: none; }
 .evidence-policy { margin-top: 18px; padding: 22px; border-radius: var(--radius); background: var(--wash); }
@@ -164,6 +172,8 @@ footer span { color: #acbbd9; }
   .metric { min-height: 0; }
   .dimension-grid p { min-height: 0; }
   .evidence-policy dl { grid-template-columns: 1fr; }
+  .evidence-download { grid-template-columns: 1fr; }
+  .evidence-download strong { grid-row: auto; grid-column: auto; margin-top: 8px; }
   .steps li { grid-template-columns: 1fr; gap: 4px; }
   footer .shell { flex-direction: column; }
 }

@@ -9,7 +9,9 @@ The report contains:
 - task routing for arbitrary custom configurations;
 - rule-based, model-based, and human grader design;
 - a matched regression protocol;
-- an eight-task-family sample scorecard rechecked directly in PAL;
-- exact PAL run links, grader rules, units, and explicit unknowns.
+- a ten-task-family observed sample rechecked directly in PAL, including multi-agent delegation and invalid-URL failure handling;
+- exact PAL run links, grader rules, units, explicit unknowns, and a public `evidence.json` artifact;
+- operational metric formulas and missing-data rules;
+- platform-core, capability-pack, journey, incident, and private-holdout suite layers.
 
 Current decision: **HOLD / NOT RATEABLE AS A GENERAL PAL HARNESS** because cancellation, recovery, platform approval, idempotency, and broader isolation remain untested.
