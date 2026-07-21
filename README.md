@@ -12,6 +12,7 @@ The report contains:
 - a ten-task-family observed sample rechecked directly in PAL, including multi-agent delegation and invalid-URL failure handling;
 - exact PAL run links, grader rules, units, explicit unknowns, and a public `evidence.json` artifact;
 - operational metric formulas and missing-data rules;
+- a required per-trial evidence record and validity gates;
 - platform-core, capability-pack, journey, incident, and private-holdout suite layers.
 
 Current decision: **HOLD / NOT RATEABLE AS A GENERAL PAL HARNESS** because cancellation, recovery, platform approval, idempotency, and broader isolation remain untested.

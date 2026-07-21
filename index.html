@@ -198,6 +198,40 @@ capability_packs: []</code></pre>
           </tbody>
         </table>
       </div>
+
+      <div class="record-grid">
+        <div>
+          <h3>Required trial record</h3>
+          <pre><code>trial_id: globally-unique-id
+task_id: versioned-task-id
+fixture_id: immutable-fixture-id
+fixture_version: configuration-revision
+environment_id: reproducible-environment
+attempt_index: 1
+parent_trial_id: null
+prompt_and_inputs: exact-values
+started_at: authoritative-timestamp
+completed_at: authoritative-timestamp
+terminal_state: completed | failed | cancelled
+trace_artifact: immutable-reference
+output_artifact: immutable-reference
+usage: {tokens, tool_calls, credits, currency}
+grader_versions: []
+assertion_results: []
+attribution: PAL_CORE | CONFIGURATION |
+  MODEL_TOOL_DATA | EVAL_HARNESS | UNRESOLVED</code></pre>
+        </div>
+        <div>
+          <h3>Record validity gates</h3>
+          <ul class="check-list">
+            <li>Missing exact input, output, fixture version, or assertion result makes task success <code>NOT_VERIFIED</code>.</li>
+            <li>Latency requires an authoritative shared clock; screenshots and visual estimates do not qualify.</li>
+            <li>Cost and outcome must come from the same trial; credits, tokens, and currency remain separate units.</li>
+            <li>Retries are linked attempts, never silently overwritten or merged into the first attempt.</li>
+            <li>External-action tests require sandbox state before and after—not the agent's self-report.</li>
+          </ul>
+        </div>
+      </div>
       <p class="callout"><strong>No default composite score.</strong> A deployment may introduce weights only after publishing the risk profile, calibration evidence, missing-data treatment and hard gates. Safety failures cannot be averaged away.</p>
     </section>
 
@@ -383,7 +417,7 @@ capability_packs: []</code></pre>
 
       <div class="deliverables">
         <a href="#framework"><span>Full specification</span><strong>Framework & controls</strong></a>
-        <a href="#scorecard"><span>Audited sample</span><strong>Eight task families</strong></a>
+        <a href="#scorecard"><span>Audited sample</span><strong>Ten task families</strong></a>
         <a href="#evidence"><span>Evidence register</span><strong>Rules & PAL run links</strong></a>
       </div>
     </section>

@@ -90,6 +90,9 @@ h1 { max-width: 820px; margin: 0; font-size: clamp(2.1rem, 5vw, 4.25rem); line-h
 .manifest-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 18px; margin-top: 22px; }
 .manifest-grid > div { min-width: 0; padding: 20px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--wash); }
 .manifest-grid h3 { margin: 0 0 12px; }
+.record-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 18px; margin-top: 22px; }
+.record-grid > div { min-width: 0; padding: 20px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--wash); }
+.record-grid h3 { margin: 0 0 12px; }
 pre { max-width: 100%; margin: 0; padding: 16px; overflow-x: auto; border-radius: 10px; background: var(--navy); color: #e6edff; font-size: .8rem; line-height: 1.55; }
 pre code { padding: 0; background: transparent; color: inherit; }
 .check-list { margin: 0; padding: 0; list-style: none; }
@@ -168,7 +171,7 @@ footer span { color: #acbbd9; }
   .topbar-inner { grid-template-columns: 1fr; }
   .verdict { width: 100%; }
   .section { padding: 52px 0; }
-  .metric-grid, .finding-grid, .dimension-grid, .suite-layers, .manifest-grid, .grader-grid, .deliverables { grid-template-columns: 1fr; }
+  .metric-grid, .finding-grid, .dimension-grid, .suite-layers, .manifest-grid, .record-grid, .grader-grid, .deliverables { grid-template-columns: 1fr; }
   .metric { min-height: 0; }
   .dimension-grid p { min-height: 0; }
   .evidence-policy dl { grid-template-columns: 1fr; }
