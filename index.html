@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A reusable, evidence-led evaluation system for PAL agents and workflows." />
+  <title>PAL Evaluation System</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav><span class="brand">PAL / EVAL</span><span class="tag">FIELD NOTES · 2026</span></nav>
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">A reusable quality system for agentic work</p>
+        <h1>Can a PAL agent<br><em>actually do its job?</em></h1>
+        <p class="lead">A product-level evaluation system for any agent or workflow a PAL user creates — measured with task-appropriate evidence, not one generic prompt.</p>
+      </div>
+      <aside class="score-card"><span>PAL PLATFORM LENS</span><strong>7</strong><p>capability dimensions</p><div class="meter"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><small>Success · Quality · Cost · Latency · Safety</small></aside>
+    </div>
+  </header>
+
+  <main>
+    <section class="statement split">
+      <div><p class="eyebrow">The important boundary</p><h2>Evaluate the system,<br>not just a demo.</h2></div>
+      <div><p>This is designed for arbitrary user-created PAL configurations. A research workflow, a publishing agent, and a support chatbot should not receive the same test; they should be held to the same rigor.</p><p class="callout">The live workspace runs are calibration samples. They prove the eval can observe PAL; they are not a claim that every PAL configuration performs the same way.</p></div>
+    </section>
+
+    <section>
+      <p class="eyebrow">01 / Configuration onboarding</p>
+      <h2>Every configuration declares its job before it is scored.</h2>
+      <div class="cards">
+        <article><b>01</b><h3>Manifest</h3><p>Job, input/output contract, tools, assets, external side effects, and risk tier.</p></article>
+        <article><b>02</b><h3>Capability tags</h3><p>Research, writing, retrieval, planning, orchestration, publishing, or safety-critical work.</p></article>
+        <article><b>03</b><h3>Relevant suite</h3><p>PAL assigns the right generic task families instead of assuming one benchmark fits all.</p></article>
+      </div>
+    </section>
+
+    <section class="loop-section">
+      <p class="eyebrow">02 / Universal evaluation loop</p>
+      <div class="loop">
+        <div>Changed agent<br><small>or workflow</small></div><span>→</span><div>Task suite<br><small>fixed + adversarial</small></div><span>→</span><div>PAL run<br><small>isolated evidence</small></div><span>→</span><div>Grading<br><small>rules + model + human</small></div><span>→</span><div>Baseline<br><small>release decision</small></div>
+      </div>
+    </section>
+
+    <section>
+      <p class="eyebrow">03 / What gets measured</p>
+      <div class="metric-grid">
+        <article><span>✓</span><h3>Success</h3><p>Did the run meet every blocking acceptance criterion?</p></article>
+        <article><span>✦</span><h3>Quality</h3><p>Correctness, completeness, adherence, and actionability.</p></article>
+        <article><span>◌</span><h3>Cost</h3><p>Tokens, tool calls, sub-agents, and cost per successful task.</p></article>
+        <article><span>↯</span><h3>Latency</h3><p>First event, completion time, and p50/p95 over repeat runs.</p></article>
+        <article><span>⊘</span><h3>Safety</h3><p>Privacy, refusal quality, least privilege, and external action gates.</p></article>
+        <article><span>≈</span><h3>Stability</h3><p>Outcome variance across paraphrases and repeat runs.</p></article>
+      </div>
+    </section>
+
+    <section class="split graders">
+      <div><p class="eyebrow">04 / Three kinds of graders</p><h2>Numbers need<br>reasons.</h2></div>
+      <div class="grader-list"><p><b>Rule-based</b><span>Format, required fields, exact counts, schemas, citations.</span></p><p><b>Model-based</b><span>Blinded rubric for correctness, completeness, plan quality, and citation entailment.</span></p><p><b>Human</b><span>Safety-sensitive cases, model disagreements, and a calibrated quality sample.</span></p></div>
+    </section>
+
+    <section>
+      <p class="eyebrow">05 / Required PAL coverage</p>
+      <div class="table-wrap"><table><thead><tr><th>Capability</th><th>Evaluation requirement</th></tr></thead><tbody>
+        <tr><td>Single-agent response</td><td>Correctness, instruction adherence, stability, calibration.</td></tr>
+        <tr><td>Tools, search & knowledge</td><td>Grounding, source entailment, retries, and a tool-call budget.</td></tr>
+        <tr><td>Multi-agent orchestration</td><td>State propagation, delegation correctness, partial-failure recovery.</td></tr>
+        <tr><td>Workflow</td><td>Step contracts, branches, cancellation/retry behavior, end-to-end latency.</td></tr>
+        <tr><td>Human-in-the-loop</td><td>Correct pause, preserved input, no approval bypass.</td></tr>
+        <tr><td>External action</td><td>Dry-run by default; distinct final confirmation before publish, send, or delete.</td></tr>
+      </tbody></table></div>
+    </section>
+
+    <section class="sample">
+      <p class="eyebrow">06 / Live calibration sample</p>
+      <h2>One workspace, used to validate the eval system.</h2>
+      <p>The following is evidence from a PAL workspace, not a global PAL benchmark. It confirms that the system can collect trace evidence across single agents, safety gates, source verification, and a seven-step workflow.</p>
+      <div class="sample-grid"><div><strong>7 / 7</strong><span>standalone agents exercised</span></div><div><strong>5 / 5</strong><span>workflow roles exercised</span></div><div><strong>8m 15s</strong><span>end-to-end workflow latency</span></div></div>
+      <ul><li><b>Strength:</b> human approval and PII protections held in observed cases.</li><li><b>Watch:</b> search retries, scout reliability, and exact output constraints need regression gates.</li></ul>
+    </section>
+
+    <section class="regression">
+      <p class="eyebrow">07 / Regression policy</p>
+      <h2>Every change is compared to a stored baseline.</h2>
+      <div class="thresholds"><div><b>−5 pp</b><span>success rate</span></div><div><b>−5 pts</b><span>quality score</span></div><div><b>+20%</b><span>p95 latency / cost</span></div><div><b>0</b><span>new safety violations</span></div></div>
+      <p>Any threshold breach opens an investigation. Production incidents and grader disputes become minimized permanent regression cases.</p>
+    </section>
+  </main>
+  <footer><span>PAL EVALUATION SYSTEM</span><span>Evidence-led · configuration-aware · regression-ready</span></footer>
+</body>
+</html>
