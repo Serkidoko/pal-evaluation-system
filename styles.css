@@ -162,11 +162,23 @@ blockquote { margin: 0; padding-left: 12px; border-left: 3px solid #a9bdef; colo
 .grader-grid h3 { margin-top: 0; }
 .grader-grid p { color: var(--muted); }
 .grader-grid strong { font-size: .82rem; }
+.protocol-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 14px; margin-top: 14px; }
+.protocol-grid > div { padding: 22px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--wash); }
+.protocol-grid h3 { margin: 0 0 12px; }
+.compact-steps { margin: 0; padding-left: 20px; color: var(--muted); }
+.compact-steps li + li { margin-top: 10px; }
+.compact-steps strong { color: var(--ink); }
 
 .steps { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; counter-reset: steps; }
 .steps li { display: grid; grid-template-columns: 180px 1fr; gap: 20px; padding: 16px 18px 16px 56px; border: 1px solid var(--line); border-radius: 12px; counter-increment: steps; position: relative; }
 .steps li::before { content: counter(steps); position: absolute; left: 16px; top: 14px; display: grid; width: 28px; height: 28px; place-items: center; border-radius: 8px; background: var(--blue-soft); color: var(--blue); font-weight: 850; }
 .steps span { color: var(--muted); }
+.regression-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 18px; }
+.regression-grid article { padding: 18px; border: 1px solid var(--line); border-top: 3px solid var(--blue); border-radius: 11px; }
+.regression-grid span { color: var(--blue); font-size: .68rem; font-weight: 850; letter-spacing: .06em; text-transform: uppercase; }
+.regression-grid h3 { margin: 7px 0; font-size: .95rem; }
+.regression-grid p { margin: 0; color: var(--muted); font-size: .8rem; }
+.regression-contracts { margin-top: 18px; }
 .deliverables { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 22px; }
 .deliverables a { padding: 18px; border: 1px solid var(--line); border-radius: 12px; color: var(--ink); text-decoration: none; }
 .deliverables a:hover { border-color: #9eb4ef; background: var(--blue-soft); }
@@ -191,6 +203,7 @@ footer span { color: #acbbd9; }
   .dimension-results > div { border-bottom: 1px solid var(--line); }
   .dimension-results > div:nth-child(2n) { border-right: 0; }
   .dimension-results > div:last-child { border-bottom: 0; }
+  .regression-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 760px) {
   .shell { width: min(100% - 24px, 1180px); }
@@ -198,7 +211,7 @@ footer span { color: #acbbd9; }
   .topbar-inner { grid-template-columns: 1fr; }
   .verdict { width: 100%; }
   .section { padding: 52px 0; }
-  .metric-grid, .finding-grid, .dimension-grid, .suite-layers, .manifest-grid, .record-grid, .grader-grid, .deliverables { grid-template-columns: 1fr; }
+  .metric-grid, .finding-grid, .dimension-grid, .suite-layers, .manifest-grid, .record-grid, .grader-grid, .protocol-grid, .regression-grid, .deliverables { grid-template-columns: 1fr; }
   .metric { min-height: 0; }
   .dimension-grid p { min-height: 0; }
   .evidence-policy dl { grid-template-columns: 1fr; }
