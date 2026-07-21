@@ -12,7 +12,7 @@
   <header class="topbar">
     <div class="shell topbar-inner">
       <div>
-        <p class="eyebrow">Technical evaluation · v2.0 · 21 Jul 2026</p>
+        <p class="eyebrow">Technical evaluation · v2.1 · 21 Jul 2026</p>
         <h1>Agent Harness Eval Proposal for PAL</h1>
         <p class="subtitle">A general system for judging arbitrary user-created agents and workflows—plus a directly verified, non-representative PAL sample.</p>
       </div>
@@ -56,7 +56,7 @@
         <article class="metric"><span>Overall PAL score</span><strong>Not calculated</strong><p>Critical control coverage and calibrated weights are absent.</p></article>
         <article class="metric"><span>Workflow evidence</span><strong>495 s · 56 credits</strong><p>One PAL-native completed run with visible timestamps and AI credits.</p></article>
         <article class="metric"><span>Strict RAG length</span><strong>1 / 3 pass</strong><p>Outputs measured 255, 233, and 253 Unicode code points.</p></article>
-        <article class="metric"><span>Platform-critical gaps</span><strong>5 controls</strong><p>Cancellation, recovery, approval, idempotency, broader isolation.</p></article>
+        <article class="metric"><span>Release-critical unknowns</span><strong>No gap count</strong><p>Permissions, pause/resume, cancellation, recovery, approval, idempotency, and broader isolation remain incomplete.</p></article>
       </div>
 
       <div class="finding-grid">
@@ -79,7 +79,7 @@
         <article class="finding unknown">
           <h3>Still unknown</h3>
           <ul>
-            <li>PAL-owned cancellation and tool-failure recovery.</li>
+            <li>PAL-owned permission enforcement, pause/resume reliability, cancellation, and tool-failure recovery.</li>
             <li>Platform-enforced approval and exactly-once external actions.</li>
             <li>Cross-workspace/asset isolation, chat latency, tokens, and currency cost.</li>
           </ul>
@@ -400,7 +400,7 @@ attribution: PAL_CORE | CONFIGURATION |
       <a class="evidence-download" href="evidence.json">
         <span>Public evidence artifact</span>
         <strong>Open evidence.json</strong>
-        <small>10 task families · exact output text where used for deterministic grading · PAL run URLs</small>
+        <small>10 observed tasks · exact output text where used for deterministic grading · PAL run URLs</small>
       </a>
 
       <div class="evidence-list">
@@ -458,7 +458,7 @@ attribution: PAL_CORE | CONFIGURATION |
           <summary><span>E08</span> Workflow · completed mechanics, failed final contract</summary>
           <div class="transcript"><b>Exact initial prompt</b><blockquote>Compare keyword search and vector search for a customer-support knowledge base. Provide a concise recommendation with two benefits, two risks, and three sources.</blockquote><b>Exact human input</b><blockquote>20,000 English-language help-center articles. Users ask natural-language questions. Current search: Elasticsearch. Priority: answer relevance, while retaining exact matches for product codes.</blockquote></div>
           <p>PAL shows start 10:20:27, end 10:28:42, status <code>Completed</code>, 56 AI credits, and seven steps. The difference is 495 seconds. Human input included <code>20,000 English-language help-center articles</code>; the final report repeated <code>20,000</code>.</p>
-          <p>The Step 7 region contained 5,407 Unicode code points including the visible role label and listed five references. It did not satisfy the requested concise result with exactly two benefits, two risks, and three sources.</p>
+          <p>The Step 7 region contained 5,407 Unicode code points including the visible role label and listed five references. It did not satisfy the requested concise result with exactly two benefits, two risks, and three sources. The exact 5,407-code-point output is retained in <a href="evidence.json">evidence.json</a> for offline review.</p>
           <p class="links"><a href="https://app.mindpal.space/user_3GZJFuRHhu8Sef4yoeHatUBSIIb-x4KRj7OtTjeOKaUK/thread/workflow/6a5ee57bdf39f0f7f7a6ec5d">Open workflow run</a></p>
         </details>
         <details id="e09-evidence">
@@ -560,7 +560,7 @@ attribution: PAL_CORE | CONFIGURATION |
 
       <div class="deliverables">
         <a href="#framework"><span>Full specification</span><strong>Framework & controls</strong></a>
-        <a href="#scorecard"><span>Audited sample</span><strong>Ten task families</strong></a>
+        <a href="#scorecard"><span>Audited sample</span><strong>Ten tasks · five dimensions</strong></a>
         <a href="#evidence"><span>Evidence register</span><strong>Rules & PAL run links</strong></a>
       </div>
     </section>
