@@ -1,5 +1,15 @@
-# PAL Agent Harness — Technical Evaluation Report
+# PAL Agent Harness Eval Proposal
 
-Standalone technical audit of PAL's agent execution harness. The report uses five stable dimensions—Correctness, Groundedness, Quality, Safety, and Efficiency—and contains an evidence-adjusted overall readiness score, a 16-control harness scorecard, ten-case evidence table, grader design, reproducible run schema, release gates, regression protocol, and the next controlled test plan.
+Technical GitHub Pages report for evaluating PAL's harness across arbitrary user-created agents, multi-agent systems, and workflows.
 
-The named agents and workflow are user-created fixtures. Their content quality is not presented as a PAL Core score; platform claims are made only where the observed behavior isolates a harness-owned control.
+The report contains:
+
+- a five-dimension evaluation taxonomy without an invented composite score;
+- twelve platform-core harness controls;
+- task routing for arbitrary custom configurations;
+- rule-based, model-based, and human grader design;
+- a matched regression protocol;
+- an eight-task-family sample scorecard rechecked directly in PAL;
+- exact PAL run links, grader rules, units, and explicit unknowns.
+
+Current decision: **HOLD / NOT RATEABLE AS A GENERAL PAL HARNESS** because cancellation, recovery, platform approval, idempotency, and broader isolation remain untested.
