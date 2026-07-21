@@ -867,3 +867,473 @@ footer b {
     animation-iteration-count: 1 !important;
   }
 }
+
+/* Harness proposal components */
+.boundary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid var(--line-strong);
+  border-left: 1px solid var(--line-strong);
+}
+
+.boundary-card {
+  position: relative;
+  min-width: 0;
+  padding: var(--space-6);
+  border-right: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line-strong);
+  background: var(--surface);
+}
+
+.boundary-card.primary {
+  border-top: 4px solid var(--blue);
+}
+
+.card-number {
+  position: absolute;
+  top: var(--space-5);
+  right: var(--space-5);
+  color: var(--line-strong);
+  font-family: "Fira Code", ui-monospace, monospace;
+  font-size: 1.35rem;
+}
+
+.card-label,
+.subsection-label,
+.summary-label {
+  margin: 0 0 var(--space-3);
+  color: var(--muted);
+  font-family: "Fira Code", ui-monospace, monospace;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.boundary-card h3 {
+  margin-bottom: var(--space-4);
+  font-size: 1.25rem;
+}
+
+.boundary-card p,
+.boundary-card li {
+  color: var(--ink-soft);
+}
+
+.boundary-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.boundary-card li + li {
+  margin-top: var(--space-2);
+}
+
+.boundary-card > code {
+  display: block;
+  margin-top: var(--space-4);
+  padding: var(--space-3);
+  border: 1px solid var(--line);
+  background: var(--surface-soft);
+  color: var(--navy);
+  font-size: 0.82rem;
+}
+
+.compact-list {
+  list-style: none;
+  padding: 0 !important;
+}
+
+.compact-list code {
+  color: var(--navy);
+}
+
+.definition-strip {
+  display: grid;
+  grid-template-columns: 11rem minmax(0, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-5);
+  padding: var(--space-5);
+  border-left: 4px solid var(--blue);
+  background: var(--blue-soft);
+}
+
+.definition-strip p {
+  max-width: 76ch;
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.suite-layers {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-bottom: var(--space-6);
+  border-top: 1px solid var(--line-strong);
+  border-left: 1px solid var(--line-strong);
+}
+
+.suite-layers article {
+  min-width: 0;
+  padding: var(--space-5);
+  border-right: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line-strong);
+  background: var(--surface);
+}
+
+.suite-layers span,
+.metric-code {
+  color: var(--blue);
+  font-family: "Fira Code", ui-monospace, monospace;
+  font-size: 0.72rem;
+}
+
+.suite-layers h3 {
+  margin: var(--space-4) 0 var(--space-2);
+  font-size: 1.05rem;
+}
+
+.suite-layers p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+.suite-table {
+  border-top: 1px solid var(--line-strong);
+  border-left: 1px solid var(--line-strong);
+}
+
+.suite-row {
+  display: grid;
+  grid-template-columns: 3.5rem minmax(10rem, 0.85fr) minmax(9rem, 0.75fr) minmax(18rem, 1.55fr);
+}
+
+.suite-row > * {
+  min-width: 0;
+  margin: 0;
+  padding: var(--space-3) var(--space-4);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.suite-row > span:first-child {
+  color: var(--muted);
+  font-family: "Fira Code", ui-monospace, monospace;
+  font-size: 0.72rem;
+}
+
+.suite-row p {
+  color: var(--ink-soft);
+  font-size: 0.87rem;
+}
+
+.suite-head {
+  background: var(--navy);
+  color: white;
+  font-family: "Fira Code", ui-monospace, monospace;
+  font-size: 0.67rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.suite-head > span:first-child {
+  color: white;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin-bottom: var(--space-7);
+  border-top: 1px solid var(--line-strong);
+  border-left: 1px solid var(--line-strong);
+}
+
+.metric-grid article {
+  min-width: 0;
+  padding: var(--space-5);
+  border-right: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line-strong);
+  background: var(--surface);
+}
+
+.metric-grid h3 {
+  margin: var(--space-4) 0 var(--space-1);
+  font-size: 1.08rem;
+}
+
+.metric-grid strong {
+  display: block;
+  min-height: 2.6em;
+  color: var(--blue);
+  font-size: 0.86rem;
+}
+
+.metric-grid p {
+  margin: var(--space-3) 0 0;
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+}
+
+.grader-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(18rem, 0.65fr);
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.grader-row {
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr) auto;
+  gap: var(--space-4);
+  align-items: center;
+  padding: var(--space-4) 0;
+  border-top: 1px solid var(--line);
+}
+
+.grader-row > span {
+  color: var(--blue);
+  font-family: "Fira Code", ui-monospace, monospace;
+  font-size: 0.68rem;
+  font-weight: 600;
+}
+
+.grader-row h3,
+.grader-row p {
+  margin: 0;
+}
+
+.grader-row h3 {
+  font-size: 1rem;
+}
+
+.grader-row p {
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+}
+
+.grader-row > b {
+  color: var(--muted);
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+
+.gate-card,
+.threshold-card {
+  padding: var(--space-5);
+  border: 1px solid var(--line-strong);
+  border-top: 4px solid var(--amber);
+  background: var(--surface);
+}
+
+.gate-card ol {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.gate-card li {
+  color: var(--ink-soft);
+}
+
+.gate-card li + li {
+  margin-top: var(--space-3);
+}
+
+.sample-summary {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(3, minmax(0, 1fr));
+  margin-bottom: var(--space-5);
+  border-top: 1px solid var(--line-strong);
+  border-left: 1px solid var(--line-strong);
+}
+
+.sample-summary article {
+  min-width: 0;
+  padding: var(--space-5);
+  border-right: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line-strong);
+  background: var(--surface);
+}
+
+.summary-primary {
+  border-top: 4px solid var(--amber);
+}
+
+.sample-summary h3 {
+  margin: var(--space-4) 0 var(--space-2);
+  font-size: 1.2rem;
+}
+
+.sample-summary strong {
+  display: block;
+  margin: var(--space-3) 0;
+  font-family: "Fira Code", ui-monospace, monospace;
+  font-size: 1.35rem;
+  line-height: 1.25;
+}
+
+.sample-summary p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+}
+
+.attribution {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-4);
+  margin-bottom: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-left: 3px solid var(--line-strong);
+  background: var(--surface-soft);
+  color: var(--ink-soft);
+  font-size: 0.84rem;
+}
+
+.attribution b {
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-family: "Fira Code", ui-monospace, monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.04em;
+}
+
+.attribution.core {
+  border-left-color: var(--blue);
+  background: var(--blue-soft);
+}
+
+.attribution.unresolved {
+  border-left-color: var(--amber);
+  background: var(--amber-soft);
+}
+
+.regression-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(18rem, 0.6fr);
+  gap: var(--space-7);
+  align-items: start;
+}
+
+.regression-steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line-strong);
+}
+
+.regression-steps li {
+  display: grid;
+  grid-template-columns: 3.5rem minmax(0, 1fr);
+  gap: var(--space-4);
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.regression-steps span {
+  color: var(--blue);
+  font-family: "Fira Code", ui-monospace, monospace;
+  font-size: 0.72rem;
+}
+
+.regression-steps p {
+  margin: var(--space-1) 0 0;
+  color: var(--ink-soft);
+}
+
+.threshold-card dl {
+  margin: 0;
+}
+
+.threshold-card dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-3) 0;
+  border-top: 1px solid var(--line);
+}
+
+.threshold-card dt,
+.threshold-card dd {
+  margin: 0;
+  font-size: 0.78rem;
+}
+
+.threshold-card dd {
+  font-weight: 600;
+}
+
+.threshold-card .critical {
+  color: var(--red);
+}
+
+@media (max-width: 1100px) {
+  .metric-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .sample-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 980px) {
+  .boundary-grid,
+  .suite-layers {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grader-layout,
+  .regression-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .boundary-grid,
+  .suite-layers,
+  .metric-grid,
+  .sample-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .definition-strip {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+
+  .suite-head {
+    display: none;
+  }
+
+  .suite-row {
+    grid-template-columns: 3rem minmax(0, 1fr);
+    padding: var(--space-3) 0;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .suite-row > * {
+    padding: var(--space-1) var(--space-3);
+    border: 0;
+  }
+
+  .suite-row > span:first-child {
+    grid-row: 1 / span 3;
+  }
+
+  .grader-row {
+    grid-template-columns: 3.5rem minmax(0, 1fr);
+  }
+
+  .grader-row > b {
+    grid-column: 2;
+    white-space: normal;
+  }
+
+  .attribution {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+}
